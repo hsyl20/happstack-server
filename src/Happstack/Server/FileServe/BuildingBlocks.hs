@@ -67,6 +67,7 @@ import           Data.Map           (Map)
 import qualified Data.Map           as Map
 import Data.Time                    (UTCTime, formatTime)
 import Data.Time.Compat             (toUTCTime)
+import Data.Time.Format             (defaultTimeLocale)
 import Filesystem.Path.CurrentOS    (commonPrefix, encodeString, decodeString, collapse, append)
 import Happstack.Server.Monads      (ServerMonad(askRq), FilterMonad, WebMonad)
 import Happstack.Server.Response    (ToMessage(toResponse), ifModifiedSince, forbidden, ok, seeOther)
@@ -74,7 +75,6 @@ import Happstack.Server.Types       (Length(ContentLength), Request(rqPaths, rqU
 import System.Directory             (doesDirectoryExist, doesFileExist, getDirectoryContents, getModificationTime)
 import System.FilePath              ((</>), addTrailingPathSeparator, hasDrive, isPathSeparator, joinPath, takeExtension, isValid)
 import System.IO                    (IOMode(ReadMode), hFileSize, hClose, openBinaryFile, withBinaryFile)
-import System.Locale                (defaultTimeLocale)
 import System.Log.Logger            (Priority(DEBUG), logM)
 import           Text.Blaze.Html             ((!))
 import qualified Text.Blaze.Html5            as H

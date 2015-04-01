@@ -23,10 +23,9 @@ import Data.Data             (Data, Typeable)
 import Data.List             ((\\), intersperse)
 import Data.Time.Clock       (UTCTime, addUTCTime, diffUTCTime)
 import Data.Time.Clock.POSIX (posixSecondsToUTCTime)
-import Data.Time.Format      (formatTime)
+import Data.Time.Format      (formatTime,defaultTimeLocale)
 import Happstack.Server.Internal.Clock (getApproximateUTCTime)
 import Text.ParserCombinators.Parsec hiding (token)
-import System.Locale         (defaultTimeLocale)
 
 -- | a type for HTTP cookies. Usually created using 'mkCookie'.
 data Cookie = Cookie

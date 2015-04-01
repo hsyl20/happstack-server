@@ -35,10 +35,10 @@ import qualified Data.Text.Encoding              as T
 import qualified Data.Text.Lazy                  as LT
 import qualified Data.Text.Lazy.Encoding         as LT
 import           Data.Time                       (UTCTime, formatTime)
+import           Data.Time.Format                (defaultTimeLocale)
 import           Happstack.Server.Internal.Monads         (FilterMonad(composeFilter))
 import           Happstack.Server.Types          (Response(..), Request(..), nullRsFlags, getHeader, noContentLength, redirect, result, setHeader, setHeaderBS)
 import           Happstack.Server.SURI           (ToSURI)
-import           System.Locale                   (defaultTimeLocale)
 import qualified Text.Blaze.Html                 as Blaze
 import qualified Text.Blaze.Html.Renderer.Utf8   as Blaze
 import           Text.Html                       (Html, renderHtml)
